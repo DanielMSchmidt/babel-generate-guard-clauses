@@ -103,10 +103,12 @@ const generateIsOneOfCheck = options =>
 
 // if (!(matcher.constructor.name === 'Matcher')) {
 //   throw new Error(matcher + 'should be an instance of + 'Matcher' + ', but got ' + matcher);
+//   return;
 // } 
 const instanceOfCheck = template(`
   if (!(ARG_NAME.constructor.name === INSTANCE_NAME)) {
-    return new Error(ARG_NAME + ' should be an instance of ' + INSTANCE_NAME + ', but got ' + ARG_NAME);
+    throw new Error(ARG_NAME + ' should be an instance of ' + INSTANCE_NAME + ', but got ' + ARG_NAME);
+    return;
   }
 `)
 
