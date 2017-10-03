@@ -106,7 +106,7 @@ const generateIsOneOfCheck = options =>
 // } 
 const instanceOfCheck = template(`
   if (!(ARG_NAME instanceof INSTANCE_NAME)) {
-    return new Error('ARG_NAME should be an instance of INSTANCE_NAME, but got ' + ARG_NAME);
+    return new Error(ARG_NAME + ' should be an instance of ' + INSTANCE_NAME + ', but got ' + ARG_NAME);
   }
 `)
 
