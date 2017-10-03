@@ -101,18 +101,18 @@ const generateIsOneOfCheck = options =>
   );
 
 
-// if (!(matcher instanceof Matcher)) {
-//   throw new Error(`Matcher withAncestor argument must be a valid Matcher, got ${typeof matcher}`);
+// if (!(matcher.constructor.name === 'Matcher')) {
+//   throw new Error(matcher + 'should be an instance of + 'Matcher' + ', but got ' + matcher);
 // } 
 const instanceOfCheck = template(`
-  if (!(ARG_NAME instanceof INSTANCE_NAME)) {
+  if (!(ARG_NAME.constructor.name === INSTANCE_NAME)) {
     return new Error(ARG_NAME + ' should be an instance of ' + INSTANCE_NAME + ', but got ' + ARG_NAME);
   }
 `)
 
 const generateInstanceOfCheck = instanceType => ({ name }) => instanceOfCheck({
   ARG_NAME: t.identifier(name),
-  INSTANCE_NAME: t.identifier(instanceType)
+  INSTANCE_NAME: t.stringLiteral(instanceType)
 });
 
 module.exports = {
