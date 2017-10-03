@@ -111,8 +111,8 @@ const instanceOfCheck = template(`
 `)
 
 const generateInstanceOfCheck = instanceType => ({ name }) => instanceOfCheck({
-  ARG_NAME: name,
-  INSTANCE_NAME: instanceType
+  ARG_NAME: t.identifier(name),
+  INSTANCE_NAME: t.identifier(instanceType)
 });
 
 module.exports = {
