@@ -1,4 +1,5 @@
 const t = require("babel-types");
+const template = require("babel-template");
 
 // Helper methods to easily stick together type checks
 // generates the following JS:
@@ -99,7 +100,23 @@ const generateIsOneOfCheck = options =>
     oneOfCheckErrorGenerator(options)
   );
 
+
+// if (!(matcher instanceof Matcher)) {
+//   throw new Error(`Matcher withAncestor argument must be a valid Matcher, got ${typeof matcher}`);
+// } 
+const instanceOfCheck = template(`
+  if (!(ARG_NAME instanceof INSTANCE_NAME)) {
+    return new Error('ARG_NAME should be an instance of INSTANCE_NAME, but got ' + ARG_NAME);
+  }
+`)
+
+const generateInstanceOfCheck = instanceType => ({ name }) => instanceOfCheck({
+  ARG_NAME: name,
+  INSTANCE_NAME: instanceType
+});
+
 module.exports = {
   generateTypeCheck,
-  generateIsOneOfCheck
+  generateIsOneOfCheck,
+  generateInstanceOfCheck
 };

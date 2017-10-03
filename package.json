@@ -10,6 +10,7 @@
     "fmt": "prettier --write index.js"
   },
   "dependencies": {
+    "babel-template": "^6.26.0",
     "babel-types": "^6.25.0"
   },
   "devDependencies": {
