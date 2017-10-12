@@ -1,4 +1,4 @@
-# Babel-Generate-Guard-Clause ![travis status](https://travis-ci.org/DanielMSchmidt/babel-generate-guard-clauses.svg?branch=master)
+# Babel-Generate-Guard-Clause ![travis status](https://travis-ci.org/DanielMSchmidt/babel-generate-guard-clauses.svg?branch=master)[![Coverage Status](https://coveralls.io/repos/github/DanielMSchmidt/babel-generate-guard-clauses/badge.svg?branch=master)](https://coveralls.io/github/DanielMSchmidt/babel-generate-guard-clauses?branch=master)
 
 A helper to generate different guard clauses.
 
