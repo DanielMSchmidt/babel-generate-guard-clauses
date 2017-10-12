@@ -31,16 +31,13 @@
     }
   },
   "devDependencies": {
-    "babel-generator": "^6.26.0",
     "coveralls": "^3.0.0",
     "eval": "^0.1.2",
-    "fs": "^0.0.1-security",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
     "lint-staged": "^4.2.3",
     "nyc": "^11.2.1",
-    "prettier": "^1.7.4",
-    "remove": "^0.1.5"
+    "prettier": "^1.7.4"
   },
   "nyc": {
     "reporter": ["lcov", "text"]
