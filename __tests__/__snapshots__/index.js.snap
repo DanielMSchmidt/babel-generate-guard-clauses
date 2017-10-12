@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-generate-guard-clauses generateInstanceOfCheck should fail for wrong type 1`] = `"true should be an instance of String, but got true"`;
+
+exports[`babel-generate-guard-clauses generateIsOneOfCheck should fail for wrong type 1`] = `"x should be one of [foo, bar], but got baz"`;
+
+exports[`babel-generate-guard-clauses generateTypeCheck literals should fail for wrong type 1`] = `"x should be a number, but got foo (string)"`;
+
+exports[`babel-generate-guard-clauses generateTypeCheck object should fail for wrong type 1`] = `"x.foo should be a number, but got 432 (string)"`;

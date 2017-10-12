@@ -3,17 +3,46 @@
   "version": "2.0.0",
   "description": "A helper to generate different guard clauses",
   "main": "index.js",
-  "repository": "https://github.com/DanielMSchmidt/babel-generate-guard-clauses.git",
+  "repository":
+    "https://github.com/DanielMSchmidt/babel-generate-guard-clauses.git",
   "author": "Daniel Schmidt <danielmschmidt92@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "fmt": "prettier --write index.js"
+    "precommit": "lint-staged",
+    "test": "jest",
+    "fmt": "prettier --write **/*{.js,.json,.css}"
   },
   "dependencies": {
     "babel-template": "^6.26.0",
     "babel-types": "^6.25.0"
   },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
+  },
   "devDependencies": {
-    "prettier": "^1.5.3"
+    "babel-generator": "^6.26.0",
+    "coveralls": "^3.0.0",
+    "eval": "^0.1.2",
+    "fs": "^0.0.1-security",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "lint-staged": "^4.2.3",
+    "nyc": "^11.2.1",
+    "prettier": "^1.7.4",
+    "remove": "^0.1.5"
+  },
+  "nyc": {
+    "reporter": ["lcov", "text"]
   }
 }

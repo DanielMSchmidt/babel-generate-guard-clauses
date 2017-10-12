@@ -100,22 +100,21 @@ const generateIsOneOfCheck = options =>
     oneOfCheckErrorGenerator(options)
   );
 
-
 // if (!(matcher.constructor.name === 'Matcher')) {
 //   throw new Error(matcher + 'should be an instance of + 'Matcher' + ', but got ' + matcher);
 //   return;
-// } 
+// }
 const instanceOfCheck = template(`
   if (!(ARG_NAME.constructor.name === INSTANCE_NAME)) {
     throw new Error(ARG_NAME + ' should be an instance of ' + INSTANCE_NAME + ', but got ' + ARG_NAME);
-    return;
   }
-`)
+`);
 
-const generateInstanceOfCheck = instanceType => ({ name }) => instanceOfCheck({
-  ARG_NAME: t.identifier(name),
-  INSTANCE_NAME: t.stringLiteral(instanceType)
-});
+const generateInstanceOfCheck = instanceType => ({ name }) =>
+  instanceOfCheck({
+    ARG_NAME: t.identifier(name),
+    INSTANCE_NAME: t.stringLiteral(instanceType)
+  });
 
 module.exports = {
   generateTypeCheck,
