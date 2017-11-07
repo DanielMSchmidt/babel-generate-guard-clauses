@@ -2,4 +2,4 @@
 
 ## `2.0.4`
 
-- Upgrade prettier (PR #5)
+* Upgrade prettier (PR #5)
