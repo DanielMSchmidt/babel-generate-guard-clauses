@@ -12,8 +12,8 @@
     "fmt": "prettier --write **/*.{js,json,css,md}"
   },
   "dependencies": {
-    "babel-template": "^6.26.0",
-    "babel-types": "^6.26.0"
+    "@babel/template": "^7.0.0-beta.49",
+    "@babel/types": "^7.0.0-beta.49"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
