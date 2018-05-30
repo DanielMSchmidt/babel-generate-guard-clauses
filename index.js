@@ -1,5 +1,5 @@
-const t = require("babel-types");
-const template = require("babel-template");
+const t = require("@babel/types");
+const template = require("@babel/template").default;
 
 // Helper methods to easily stick together type checks
 // generates the following JS:
