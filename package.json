@@ -1,6 +1,6 @@
 {
   "name": "babel-generate-guard-clauses",
-  "version": "3.0.0-0",
+  "version": "3.0.0-1",
   "description": "A helper to generate different guard clauses",
   "main": "index.js",
   "repository": "https://github.com/DanielMSchmidt/babel-generate-guard-clauses.git",
